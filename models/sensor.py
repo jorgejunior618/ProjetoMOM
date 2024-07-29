@@ -1,5 +1,5 @@
 from typing import Literal
-from publisher import sensorPublisher
+from models.publisher import sensorPublisher
 
 TipoSensor = Literal["Temperatura", "Humidade", "Velocidade"]
 

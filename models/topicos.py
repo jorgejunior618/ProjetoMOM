@@ -1,4 +1,4 @@
-from publisher import sensorPublisher
+from models.publisher import sensorPublisher
 
 class _TopicosMOM:
   def __init__(self):
