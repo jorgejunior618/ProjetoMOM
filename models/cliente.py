@@ -17,11 +17,9 @@ class Cliente:
     self.client.loop_forever()
 
   def inscreverTopico(self, topico: str):
-    print(f"ASSINANDO: {topico}")
     self.client.subscribe(topico)
     self.client.subscribe(f"critic{topico}")
 
   def desinscrever(self, topico: str):
-    print(f"DESASSINANDO: {topico}")
     self.client.unsubscribe(topico)
     self.client.unsubscribe(f"critic{topico}")

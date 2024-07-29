@@ -9,8 +9,8 @@ from tkinter.font import Font
 from tkinter.ttk import Style, Button, Label, Entry
 from typing import Literal
 
-from gui_sensor import GuiSensor
-from gui_cliente import GuiCliente
+from gui.gui_sensor import GuiSensor
+from gui.gui_cliente import GuiCliente
 
 from models.topicos import topicosMOM
 from models.cliente import Cliente
@@ -172,7 +172,6 @@ class GuiObjectBuilder:
 
   def adicionarSensor(self, tipo: TipoSensor) -> bool:
     try:
-      print(f"Novo sensor de {tipo}")
       self.removeComponentesNovoSensor()
 
       sensorGui = GuiSensor(tipo, self.janela)
@@ -192,7 +191,6 @@ class GuiObjectBuilder:
       return False
 
     try:
-      print(f"Novo cliente de nome {nomeNovoCLiente}")
       clienteNovo = Cliente(nomeNovoCLiente)
       clienteGui = GuiCliente(cliente=clienteNovo, raiz=self.janela)
       clienteGui.iniciaAplicacao()

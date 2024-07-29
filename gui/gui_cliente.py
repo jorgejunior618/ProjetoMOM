@@ -86,7 +86,6 @@ class GuiCliente:
     def onMessageFunc(cli: mqtt.Client, userdata: Any, message: mqtt.MQTTMessage):
       msg = message.payload.decode()
       topico = message.topic
-      print(f"MENSAGEM DE {topico}: {msg} teu cu")
 
       if topico.endswith("topics_change"):
         if msg.startswith("remove"):
